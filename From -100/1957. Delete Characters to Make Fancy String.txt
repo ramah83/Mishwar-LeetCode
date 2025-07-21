@@ -1,0 +1,17 @@
+class Solution {
+public:
+    string makeFancyString(string str) {
+           int n=str.size();
+           string s="";
+    for (int i=0;i<n;) {
+        char x=str[i];
+        if (str[i+1]==x and str[i+2]==x) {
+            s+=str[i];
+            s+=str[i+1];
+            while (str[i]==x) i++;
+        }
+        else {s+=str[i];i++;}
+    }
+    return s;
+    }
+};
